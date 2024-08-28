@@ -1,0 +1,127 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+}
+
+.calendar-container {
+    width: 100%;
+    max-width: 800px;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.calendar-header select {
+    padding: 10px;
+    font-size: 16px;
+}
+
+.calendar-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.calendar-table th,
+.calendar-table td {
+    padding: 10px;
+    text-align: center;
+    border: 1.1px solid #ddd;
+    position: relative;
+    /* Para posicionar las bolitas */
+    bottom: 2px;
+}
+
+.calendar-table th {
+    background-color: #f0f0f0;
+}
+
+.calendar-table td {
+    height: 100px;
+    position: relative;
+    /* Para posicionar las bolitas */
+}
+
+.calendar-table td.empty {
+    cursor: not-allowed;
+    background-color: #ece8e8;
+
+}
+
+/* Estilos para las bolitas */
+.small-bullet {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    font-size: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    cursor: pointer;
+}
+
+.info-bullet {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    font-size: 12px;
+}
+
+.small-bullet:nth-child(1) {
+    top: 5px;
+    right: 5px;
+}
+
+.small-bullet:nth-child(2) {
+    top: 30px;
+    right: 5px;
+}
+
+.small-bullet:nth-child(3) {
+    top: 55px;
+    right: 5px;
+}
+
+.small-bullet:nth-child(4) {
+    top: 80px;
+    right: 5px;
+}
+
+.day-number {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    background-color: gray;
+    color: white;
+    width: 30px;
+    height: 30px;
+}
+
+.recibido {
+    background-color: red;
+    color: white;
+}
+
+.notificado {
+    background-color: yellow;
+}
+
+.resuelto {
+    color: white;
+    background-color: green;
+}
+
+.prorroga {
+    color: white;
+    background-color: blue;
+}

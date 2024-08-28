@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Texto en varias líneas en una celda de tabla</title>
+<style>
+    table {
+        border-collapse: collapse;
+        width: 100%;
+    }
+
+    th, td {
+        border: 1px solid #ddd;
+        padding: 8px;
+        text-align: left;
+    }
+
+    /* Utilizando white-space */
+    .wrap-normal td {
+        white-space: normal;
+    }
+
+    /* Utilizando word-wrap */
+    .wrap-word td {
+        word-wrap: break-word;
+    }
+</style>
+</head>
+<body>
+
+<h2>Utilizando white-space</h2>
+<table class="wrap-normal">
+  <tr>
+    <th>Nombre</th>
+    <th>Descripción</th>
+  </tr>
+  <tr>
+    <td>Producto 1</td>
+    <td>Este es un texto largo que hará que el contenido de la celda se envuelva en varias líneas en lugar de crecer horizontalmente.</td>
+  </tr>
+</table>
+
+<h2>Utilizando word-wrap</h2>
+<table class="wrap-word">
+  <tr>
+    <th>Nombre</th>
+    <th>Descripción</th>
+  </tr>
+  <tr>
+    <td>Producto 1</td>
+    <td>Esteesuntextolargoqueharáquelaspalabrasserompanyseenvuelvanenvariaslíneas.</td>
+  </tr>
+</table>
+
+</body>
+</html>
